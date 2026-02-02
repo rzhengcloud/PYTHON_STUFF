@@ -281,10 +281,20 @@ t = """2 5 4
 5 5 7 8 9 10"""
 # print(s.split())
 
-# K,M = map(int,s.split())
-# nums = list(map(int,))
+# K,M = map(int, s.split())
+# K,M = s.split() # K,M are both strings here
 # print(type(K))
+# print(K)
 # print(M)
+
+# nums = list(map(int,s.split()))
+# print(nums)
+
+# x = "      spacious   "
+# print("1. All stripped: |"+ x.strip() +"|")
+# print("2. left stripped: |"+ x.lstrip() +"|")
+# print("3. right stripped: |"+ x.rstrip() +"|")
+
 
 # data = []
 # for line in t.strip().split('\n'):
@@ -295,6 +305,9 @@ t = """2 5 4
 #     data.append(values)
 # print(f"{data=}")
 # print(type(data))
+
+# 2025-12-05 12:38:07 PST
+
 # data = [[1, 2], [3, 4]]
 
 # import itertools
@@ -305,20 +318,27 @@ t = """2 5 4
 # for x in itertools.product(*data):
 #     print(x)
 
-# # Now, if you try to put this into a set:
+# Now, if you try to put this into a set:
 # print("\nSet of product(*data):")
-# print(set(itertools.product([1, 2], [3, 4])))
+# data_set = set(itertools.product([1, 2], [3, 4]))
+# print(data_set)
+# #note unpacking here for remaining elements.
+# for a,b, *rest in data_set:
+#     print("with *rest", a,b)
+# for a,b in data_set:
+#     print(a,b)
+
+# print(set(itertools.product(*data)))
 
 # print("\nWrong way:") #error
-#print(set(itertools.product([[1, 2], [3, 4]])))
+# print(set(itertools.product([[1, 2], [3, 4]])))
 
-# x = "abc"
-# y = "12"
+x = "abc"
+y = "12"
 
-
-# for a in zip(x,y):
-#     print(a)
-# print(zip(x,y))
+for a in zip(x,y):
+    print(a) #(a,1), (b,2)
+print(zip(x,y))
 
 
 # input = "3 5"

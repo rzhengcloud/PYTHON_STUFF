@@ -116,3 +116,9 @@ second_sort= sorted(first_sort, key=lambda item: item[0])
 # If item[0] is equal, it proceeds to compare item[1].
 second_sort= sorted(first_sort)
 # print(second_sort)
+
+#note stable sorting order. casefold is stricter than lower since it accounts for unicode
+# also note, it's not key = str.casefold() or str.lower()
+print(sorted("This is Andrew anDrew test string from ANDREW".split(), key = str.casefold))
+print(sorted("This is Andrew anDrew test string from ANDREW".split(), key = str.lower))
+
